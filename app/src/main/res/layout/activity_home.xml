@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ===================================================== -->
+        <!-- TOP HEADER                                            -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESQ-VOICE"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#94A3B8"
+                    android:letterSpacing="0.08"/>
+
+                <TextView
+                    android:id="@+id/tvHomeTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เลือกสถานการณ์ฉุกเฉิน"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#0F172A"/>
+            </LinearLayout>
+
+            <!-- ปุ่มเปลี่ยนภาษา (Language) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLanguage"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="🌐 ไทย"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:cornerRadius="22dp"
+                app:strokeColor="#CBD5E1"
+                android:textColor="#334155"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- MEDICAL ID BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMedicalId"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="🩺"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:cornerRadius="22dp"
+                app:strokeColor="#CBD5E1"
+                android:textColor="#334155"/>
+
+        </LinearLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- QUICK EMERGENCY SOS BANNER                            -->
+        <!-- ===================================================== -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSosBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#DC2626"
+            app:strokeWidth="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚨"
+                    android:textSize="32sp"
+                    android:layout_marginEnd="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvSosTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SOS ฉุกเฉินด่วน"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/tvSosDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="แตะเพื่อเริ่มระบบเสียงนำทางและส่งสัญญาณออฟไลน์"
+                        android:textSize="12sp"
+                        android:textColor="#FEE2E2"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- ===================================================== -->
+        <!-- 4 EMERGENCY CARDS GRID                                -->
+        <!-- ===================================================== -->
+
+        <TextView
+            android:id="@+id/tvGuideTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คู่มือการช่วยเหลือ (เลือกสถานการณ์)"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#64748B"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- ROW 1: CPR & CHOKING -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <!-- CARD CPR -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCpr"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#FECACA"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="❤️"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCprTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CPR (ปั๊มหัวใจ)"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#B91C1C"/>
+
+                    <TextView
+                        android:id="@+id/tvCprDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="หัวใจหยุดเต้น"
+                        android:textSize="11sp"
+                        android:textColor="#94A3B8"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD CHOKING -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardChoking"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🗣️"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvChokingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="สำลักอาหาร"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"/>
+
+                    <TextView
+                        android:id="@+id/tvChokingDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="อาหารติดคอ"
+                        android:textSize="11sp"
+                        android:textColor="#94A3B8"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+        <!-- ROW 2: BLEEDING & SEIZURE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- CARD BLEEDING -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBleeding"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🩸"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvBleedingTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ห้ามเลือด"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"/>
+
+                    <TextView
+                        android:id="@+id/tvBleedingDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="แผลฉกรรจ์"
+                        android:textSize="11sp"
+                        android:textColor="#94A3B8"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD SEIZURE -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSeizure"
+                android:layout_width="0dp"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeColor="#E2E8F0"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSeizureTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="อาการชัก"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"/>
+
+                    <TextView
+                        android:id="@+id/tvSeizureDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ชักเกร็ง/หมดสติ"
+                        android:textSize="11sp"
+                        android:textColor="#94A3B8"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+
+        <!-- ===================================================== -->
+        <!-- QUICK ACTIONS BAR (1669, GPS, FLASH)                  -->
+        <!-- ===================================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCall1669"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="📞 1669"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#166534"
+                app:backgroundTint="#DCFCE7"
+                app:cornerRadius="14dp"
+                android:layout_marginEnd="6dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGpsShare"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="📍 GPS"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#1E40AF"
+                app:backgroundTint="#DBEAFE"
+                app:cornerRadius="14dp"
+                android:layout_marginEnd="6dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFlashlight"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="🔦 ไฟฉาย"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#92400E"
+                app:backgroundTint="#FEF3C7"
+                app:cornerRadius="14dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
